@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1645b8;
+  --color-brand-dark: #10358f;
+  --color-brand-50: #eef3fd;
+  --color-accent: #10b995;
+  --color-accent-dark: #087f67;
+  --color-accent-50: #e9faf5;
+  --color-ink: #172b4d;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-ink antialiased;
+}
+
+/* Shared form control look */
+.input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-ink shadow-xs outline-none transition placeholder:text-slate-400 focus:border-brand focus:ring-4 focus:ring-brand/10 disabled:bg-slate-100;
+}
+.input-error {
+  @apply border-red-400 focus:border-red-500 focus:ring-red-100;
+}
